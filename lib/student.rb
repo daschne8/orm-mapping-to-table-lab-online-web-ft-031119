@@ -31,7 +31,7 @@ class Student
   end
 
   def self.drop_table
-    sql = "DROP TABLE songs"
+    sql = "DROP TABLE songs;"
     DB[:conn].execute(sql)
   end
 
