@@ -2,7 +2,15 @@
 class Student
   attr_accessor
 
-  def initialize
+  def initialize()
+
+  end
+
+  def save
+
+  end
+
+  def create
 
   end
 
