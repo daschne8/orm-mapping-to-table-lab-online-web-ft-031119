@@ -7,7 +7,7 @@ class Student
   end
 
   def save
-
+    
   end
 
   def create
@@ -16,13 +16,20 @@ class Student
 
   def self.create_table
     sql = <<-SQL
-    CREATE TABEL IF NOT EXISTS songs(
+    CREATE TABEL IF NOT EXISTS songs (
       id INTEGER PRIMARY KEY,
       name TEXT,
       grade TEXT
     )
     SQL
     DB[:conn].execute(sql)
+  end
+
+  def drop_table
+    sql = <<-SQL
+    DROP TABLE songs
+    SQL
+    DB[:conn].execute("DROP TABLE songs")
   end
 
 
