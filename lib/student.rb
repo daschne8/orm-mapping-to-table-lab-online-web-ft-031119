@@ -26,9 +26,6 @@ class Student
   end
 
   def drop_table
-    sql = <<-SQL
-    DROP TABLE songs
-    SQL
     DB[:conn].execute("DROP TABLE songs")
   end
 
